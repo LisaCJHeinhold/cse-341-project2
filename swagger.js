@@ -6,7 +6,7 @@ const doc = {
       description: 'An api to hold employee and department info',
     },
     host: 'localhost:3000',
-    schemes: ['https'],
+    schemes: ['http'],
   };
   
   const outputFile = './swagger.json';

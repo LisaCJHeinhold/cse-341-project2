@@ -5,10 +5,10 @@
     "description": "An api to hold employee and department info",
     "version": "1.0.0"
   },
-  "host": "cse-341-project2-gbid.onrender.com",
+  "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
   "paths": {
     "/": {

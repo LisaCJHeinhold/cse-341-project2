@@ -23,7 +23,7 @@ const getOneDepartment = async (req, res) => {
     });
 };
 
-const createDepartment = async (req, res) => {
+const createDepartment = async (req, res, next) => {
     //#swagger.tags=['Departments']
     try {
         const department = {
@@ -31,7 +31,7 @@ const createDepartment = async (req, res) => {
             budget: req.body.budget,
             location: req.body.location
         };
-        const response = await mongodb.getDatabase().db().collection('departments'.insertOne(department));
+        const response = await mongodb.getDatabase().db().collection('departments').insertOne(department);
         if (response.acknowledged) {
             res.status(204).send();
         } else {

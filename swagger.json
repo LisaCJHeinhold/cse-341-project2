@@ -5,7 +5,7 @@
     "description": "An api to hold employee and department info",
     "version": "1.0.0"
   },
-  "host": "https://cse-341-project2-gbid.onrender.com",
+  "host": "cse-341-project2-gbid.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"

@@ -23,7 +23,7 @@ const getOneEmployee = async (req, res) => {
     });
 };
 
-const createEmployee = async (req, res) => {
+const createEmployee = async (req, res, next) => {
     //#swagger.tags=['Employees']
     try {
         const employee = {
@@ -34,7 +34,7 @@ const createEmployee = async (req, res) => {
             hireDate: req.body.hireDate,
             departmentId: req.body.departmentId
         };
-        const response = await mongodb.getDatabase().db().collection('employees'.insertOne(employee));
+        const response = await mongodb.getDatabase().db().collection('employees').insertOne(employee);
         if (response.acknowledged) {
             res.status(204).send();
         } else {

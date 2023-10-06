@@ -33,7 +33,7 @@ app.use('/', require('./routes/index'));
 passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: process.env.CALLBACK_URL
+    callbackURL: "https://cse-341-project2-gbid.onrender.com/github/callback"
 },
 function(accessToken, refreshToken, profile, done) {
     return done(null, profile);
